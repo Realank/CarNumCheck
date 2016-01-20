@@ -1,0 +1,15 @@
+//
+//  DetailViewController.h
+//  CarNumCheck
+//
+//  Created by Realank on 16/1/20.
+//  Copyright © 2016年 realank. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface DetailViewController : UIViewController
+
+@property (nonatomic,strong) NSString* htmlContent;
+
+@end
