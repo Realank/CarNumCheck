@@ -230,9 +230,8 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
                 userAgent = mutableUserAgent;
             }
         }
-
-        userAgent = @"éå®æCRM 3.6 rv:3.6.0.8 (iPhone; iPhone OS 9.2; zh_CN)";//@"销售易CRM 3.6 rv:3.6.0.8 (iPhone; iPhone OS 9.2; zh_CN)";
         userAgent = @"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.130 Safari/537.36";
+        userAgent = [userAgent stringByAppendingFormat:@" Rand:%d",arc4random() % 200];
         [self setValue:userAgent forHTTPHeaderField:@"User-Agent"];
     }
 

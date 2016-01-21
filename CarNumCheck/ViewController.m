@@ -24,6 +24,11 @@
 }
 
 - (void)checkNumberWithProvince:(NSString*)prov andNumber:(NSString*)number {
+    
+    
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] removeCookiesSinceDate:[NSDate dateWithTimeIntervalSince1970:0]];
+    
+    
     NSArray *key = @[@"txtVehicleNo",@"lei",@"provice"];
     NSArray *value = @[number,@"小型汽车",prov];
     NSDictionary *params = [NSDictionary dictionaryWithObjects:value forKeys:key];
@@ -40,5 +45,6 @@
     [self checkNumberWithProvince:self.provinceTF.text andNumber:self.carNumTF.text];
     [self.view endEditing:YES];
 }
+
 
 @end
