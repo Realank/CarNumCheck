@@ -11,11 +11,6 @@
 
 @implementation HttpUtil
 
-
-
-
-
-
 + (AFHTTPRequestOperation *)send_request:(NSString *)request post:(BOOL)post params:(id)params
                                completed:(KKSucceedBlock)succeed failed:(KKFailedBlock)failed {
     
